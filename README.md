@@ -32,3 +32,7 @@ Step 5: Clustering performed by cluster_similar_documents function
   1.taking the test set as input and performing LDA and assigning topics to each new review.
   2.clustering and collecting each review into saperate folders based on their topic.
   
+Future expansions.
+  1. Including the reviews from external reviewers for each movie has been a challenge due to different html layout of different websites to which these links direct. Currently, I have involved Wogma reviews and twitter reviews along with an introductory paragraph of each of the external reviews which was available on the wogma webpage in my analysis. Twitter reviews however include a lot of unwanted words (kind of noise) as they are more sentiment based and less content related words can be extracted from them, while the add up much to the memory and slow dowm the execution. A better method to clean "twitter-reviews data" has to be found to get best results from data.
+  2. Tags involved in Parental Guidance can be given more weight in order to contribute to a more precise clustering on the basis of factors like violence, sexual content and Language used. One method which I tried is printing these tags a few repeated times in each document to increase their contribution. However, they didn't contribute a drastic change in the results. A better method has to be found for this.
+  
