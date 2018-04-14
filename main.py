@@ -33,7 +33,7 @@ def clean(doc):
 corpus_path = "D:\\Unfound\\reviews_new\\"
 article_paths = [os.path.join(corpus_path,p) for p in os.listdir(corpus_path) if p.endswith("txt")]
 
-# Read contents of all the articles in a list "doc_complete"
+# Read contents of all the reviews in a list "doc_complete"
 doc_complete = []
 for path in article_paths:
     fp = codecs.open(path,'r','utf-8')
@@ -44,7 +44,7 @@ for path in article_paths:
 docs_all = random.sample(doc_complete, 1000)
 
 
-# Use 60000 articles for training.
+# Use 700 articles for training.
 docs_train = docs_all[:700]
 #docs_train = doc_complete[:700]
 # Cleaning reviews
@@ -59,7 +59,7 @@ doc_clean = [clean(doc) for doc in docs_train]
 # Creating term dictionary of corpus 
 dictionary = corpora.Dictionary(doc_clean)
 
-#Filter terms which occurs in less than 10 articles & more than 40% of the articles Note: This can be 
+#Filter terms which occurs in less than 10 articles & more than 40% of the reviews Note: This can be 
 #optimized for better accuracy
 dictionary.filter_extremes(no_below=10, no_above= 0.4)
 
